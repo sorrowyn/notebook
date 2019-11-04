@@ -112,6 +112,7 @@ int CountNode(LinkList &L)
 10 + 9 + 8 + 7 = 34
 34 + 4 = 38
 0~54 ->38-1 = 37
+
 //返回未结点
 LinkList_A(LinkList L)
 {
@@ -183,6 +184,7 @@ void Swap(BiTree &T)
 	}
 }
 
+//模板
 Template<class Type> int SeqList<Type>::Insert(Type &x, int i)
 {
 	if(i < 0 || i > last+1 || last == MaxSize-1)
@@ -202,6 +204,7 @@ Template<class Type> int SeqList<Type>::Insert(Type &x, int i)
 	return 0;
 }
 
+//
 Template<class Type> int SeqList<Type>::Remove(Type &x)
 {
 	int i = Find(x);
@@ -258,9 +261,15 @@ void mian()
 	}
 }
 
-
-
-
-
-
-
+Template<class Type>
+int BinaryTree<Type>::Degree1(BinaryTree<Type> *t)const
+{
+	if(t == NULL)
+		return 0;
+	if(t->leftchild != NULL && t->rightchild==NULL || t->leftchild==NULL && t->rightchild != NULL)
+		return 1 + Degree1(t->leftchild) + Degree1(t->rightchild)
+	else
+		return Degree1(t->leftchild) + Degree1(t->rightchild)		
+}
+# 130页 一(1)
+# 131页 二(12) 二(13)
