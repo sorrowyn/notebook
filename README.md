@@ -1,7 +1,7 @@
 # NoteBook
 ## 远程连接服务器端Jupyter Notebook
-第一步:配置
- jupyter notebook --generate-config  生成配置文件
+###第一步:配置
+jupyter notebook --generate-config  生成配置文件
   jupyter notebook password 生成密码
   或者
   python3
@@ -15,9 +15,9 @@
   c.NotebookApp.allow_remote_access = True
   c.NotebookApp.notebook_dir='/home/sanra123/jupyter'（指定打开目录）
   
-第一步:端口绑定
+###第二步:端口绑定
  ssh -L 8888:127.0.0.1:8888 mll@XXXXXXX
  其中XXXXX代表address_of_remote(远程服务器IP) 
-第二步:启动
+###第三步:启动
  activate torch   切换环境
  jupyter notebook 启动notebook
