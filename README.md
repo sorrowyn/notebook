@@ -10,12 +10,16 @@
   passwd()
   ```  
 *默认情况下，配置文件 ~/.jupyter/jupyter_notebook_config.py 并不存在，需要自行创建
+
+  ```python
   c.NotebookApp.ip='*' #允许访问的IP地址，设置为*代表允许任何客户端访问\
   c.NotebookApp.password = u'sha1:8d...刚才生成密码时复制的密文'\
   c.NotebookApp.open_browser = False\
   c.NotebookApp.port =8888 #可自行指定一个端口, 访问时使用该端口\
   c.NotebookApp.allow_remote_access = True\
   c.NotebookApp.notebook_dir='/home/sanra123/jupyter'（指定打开目录）\
+  ``` 
+
   
 ### 第二步:端口绑定
  *ssh -L 8888:127.0.0.1:8888 mll@XXXXXXX
